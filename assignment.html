@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript" src ="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["linechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+['Period', '2.00', '2.20', '2.40', '2.60', '2.80', '3.00' ], 
+
+
+
+['1', 200, 200, 200, 200, 200], 
+
+
+
+['2', 204, 204.4, 204.8, 205.2, 205.6], 
+
+
+
+['3', 212.24, 213.49, 214.75, 216.01, 217.27], 
+
+
+
+['4', 225.23, 227.89, 230.59, 233.3, 236.04], 
+
+
+
+['5', 243.8, 248.62, 253.54, 258.53, 263.61], 
+
+
+]);
+var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+chart.draw(data, { width: 1000, height: 500, legend: 'bottom', title: 'Compound Interest Comparisons'});
+                  }
+        </script>
+         </head>
+<body>
+<div id = "chart_div"></div>
+</body>
+</html>
+
+</html>
